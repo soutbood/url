@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting…</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting…</title>
 
-    <!-- CHANGE THIS URL LATER -->
-    <meta http-equiv="refresh" content="0; url=https://pavilion-long-see-meal.trycloudflare.com" />
+  <!-- Prevent caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
-    <script>
-      // CHANGE THIS URL LATER
-      const TARGET_URL = "https://pavilion-long-see-meal.trycloudflare.com";
-      window.location.replace(TARGET_URL);
-    </script>
-  </head>
-  <body>
-    <p>
-      Redirecting…  
-      <a href="https://pavilion-long-see-meal.trycloudflare.com">Click here if you are not redirected</a>
-    </p>
-  </body>
+  <!-- Redirect immediately -->
+  <meta http-equiv="refresh" content="0; url=https://pavilion-long-see-meal.trycloudflare.com" />
+
+  <script>
+    // Prevent caching by appending a timestamp
+    const TARGET_URL = "https://pavilion-long-see-meal.trycloudflare.com";
+    const noCacheUrl = TARGET_URL + "?_ts=" + new Date().getTime();
+    window.location.replace(noCacheUrl);
+  </script>
+</head>
+<body>
+  <p>
+    Redirecting…  
+    <a href="https://pavilion-long-see-meal.trycloudflare.com">Click here if you are not redirected</a>
+  </p>
+</body>
 </html>
